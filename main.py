@@ -17,3 +17,8 @@ class Datos(BaseModel):
 def sumar(datos: Datos):
     resultado = datos.a + datos.b
     return {"resultado": resultado}
+
+@app.get("/sumar-get")
+def sumar_get(a: float,b: float):
+    resultado=a+b
+    return("resultado":resultado)
