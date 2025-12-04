@@ -18,7 +18,8 @@ def sumar(datos: Datos):
     resultado = datos.a + datos.b
     return {"resultado": resultado}
 
-@app.post("/sumar")
-def sumar(datos: Datos):
-    resultado = datos.a + datos.b
+@app.get("/sumar")
+def sumar(a: float, b: float):
+    resultado = a + b
     return {"resultado": resultado}
+
